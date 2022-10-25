@@ -487,23 +487,22 @@
 
       // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
 
-      //these are cursed smh
-
       window.onload = () => {
-        document
-          .querySelector(".list-unstyled")
-          .removeChild(document.querySelector(".list-unstyled").children[2]);
+        let twit = document.querySelector(
+          "aside div:nth-child(3) ol li:nth-child(2)"
+        );
+        twit.remove();
       };
 
-      window.onload();
-
       // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+
+      //THIS is cursed
       deleteFifty = () => {
         let par = document.querySelectorAll("div.blog-post p:nth-child(3)");
         par.slice(0, 50);
       };
 
-      deleteFifty();
+      //deleteFifty();
 
       // Write a JavaScript functionality to add a new Blog Post (div with title and text)
 
